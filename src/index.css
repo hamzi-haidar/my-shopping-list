@@ -275,9 +275,28 @@ h2 span {
   width: 9rem;
   height: 3rem;
   background-color: rgba(0, 0, 0, 0.789);
-  color: white;
+  color: #dce1de;
   font-weight: 700;
 }
 .footer select {
   width: 20rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+select::-webkit-scrollbar {
+  width: 10px;
+  border-left: 1px solid #dce1de59;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #dce1de;
+  border-radius: 10rem;
+}
+
+::-webkit-inner-spin-button {
+  display: none;
 }
