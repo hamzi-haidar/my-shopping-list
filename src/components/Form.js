@@ -22,9 +22,9 @@ export default function Form({ user, onSetItems }) {
 
     onSetItems(newItem);
 
-    setQuantity(1);
-    setItemName("");
-    setPrice("");
+    // setQuantity(1);
+    // setItemName("");
+    // setPrice("");
   }
 
   return (
