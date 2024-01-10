@@ -1,27 +1,14 @@
-export default function LogIn({ onLogIn, user, balance, setUser, setBalance }) {
+export default function LogIn({
+  onLogIn,
+  user,
+  balance,
+  setUser,
+  setBalance,
+  children,
+}) {
   return (
     <div>
-      <div className="login-page">
-        <div className="login-container">
-          <h2>Login</h2>
-
-          <form onSubmit={onLogIn}>
-            <input
-              value={user}
-              type="text"
-              placeholder="Enter name"
-              onChange={(e) => setUser(e.target.value)}
-            ></input>
-            <input
-              value={balance}
-              type="number"
-              placeholder="Enter balance"
-              onChange={(e) => setBalance(e.target.value)}
-            ></input>
-            <button>Log in</button>
-          </form>
-        </div>
-      </div>
+      <div className="login-page">{children}</div>
     </div>
   );
 }

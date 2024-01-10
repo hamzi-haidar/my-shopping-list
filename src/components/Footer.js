@@ -4,7 +4,8 @@ export default function Footer({ onClearList, onSetSort, sort }) {
       <div>
         <label>Sort by:</label>
         <select value={sort} onChange={onSetSort}>
-          <option value="input">input time</option>
+          <option value="default">Default</option>
+          <option value="input">Input time</option>
           <option value="highToLow">High to low price</option>
           <option value="lowToHigh">Low to high price</option>
         </select>

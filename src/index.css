@@ -165,42 +165,136 @@ h2 span {
   margin-left: 1rem;
 }
 .list-container {
-  overflow-y: auto;
-  direction: rtl;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.button-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20rem;
+  bottom: 2rem;
+  left: 45%;
+}
+
+.button-container span {
+  color: white;
+}
+
+.details-title {
+  width: 146rem;
+  display: flex;
+  padding: 5px 0 5px 4rem;
+  margin-bottom: 4rem;
+  color: white;
+  font-size: 2rem;
+  border-bottom: 1px solid white;
+}
+
+.details-title h3 {
+  width: 24rem;
+}
+
+.details-title :nth-child(2) {
+  margin-right: 4rem;
+}
+
+.details-title :last-child {
+  opacity: 0;
+  margin-left: 10rem;
+}
+
+.closed .details-title :last-child {
+  opacity: 1;
+}
+
+.lists {
+  display: flex;
 }
 
 .list {
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-  color: #dce1de;
-  font-size: 2.4rem;
-  font-weight: 500;
-  margin: 3rem 0;
-  list-style: none;
-  direction: ltr;
-}
-.list-item {
   display: flex;
-  align-items: center;
-  direction: ltr;
+  flex-direction: column;
+  gap: 3rem;
+  color: #dce1de;
+  font-size: 3rem;
+  font-weight: 500;
+  list-style: none;
 }
 
-.list-item span {
-  font-size: 2.7rem;
+.list-item {
+  width: 142rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.item-detail {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70rem;
+}
+
+.item-detail p {
+  width: 50rem;
+  text-align: center;
+}
+
+.item-detail :last-child::first-letter {
+  color: rgb(10, 182, 10);
+  font-size: 3.5rem;
+}
+
+.item-detail span {
+  width: 7rem;
+  margin-right: 10rem;
+  font-size: 3.7rem;
   font-weight: 700;
   color: #aefc41;
   text-shadow: 0px 0px 10px #aefc41d9;
+  text-align: center;
 }
 
-.list-item button {
+.item-date {
+  opacity: 0;
+  width: 40rem;
+  transition: all 0.2s;
+}
+
+.closed .item-date {
+  opacity: 1;
+}
+
+.list-item .item-btn {
+  width: 8rem;
+  height: 3rem;
   background-color: rgb(12, 12, 12);
   color: rgb(164, 156, 156);
   border: 2px solid red;
-  margin-left: 1rem;
   margin-top: 5px;
+  translate: -34rem 0;
+  transition: translate 0.5s;
+}
+
+.closed .item-btn {
+  translate: 0;
+}
+
+.hide-item {
+  opacity: 0;
+  color: #49a078;
+  transform: translatey(-20rem);
+}
+
+.show-item {
+  opacity: 1;
+  transform: translatey(0rem);
+  transition: all 0.15s, color 2s;
 }
 
 .total-container {
